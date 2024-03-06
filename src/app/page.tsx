@@ -1,27 +1,11 @@
-"use client";
-import { useState } from "react";
-import Loading from "./loading";
+import PokemonCardSSR from "@/components/PokemonCardSSR";
+import PokemonCard from "@/components/PokemonCard";
+export default async function Home() {
 
-export default function Home({names}) {
   return (
     <div>
-     {
-      names.map((name, index) => {
-        return(
-          <h3 key={index}>{name}</h3>
-        )
-      })
-     }
+      <PokemonCardSSR />
+      <PokemonCard />
     </div>
   );
-}
-
-
-
-export async function getServerSideProps(){
-  return {
-    props: {
-      names: ["Ivan", "Carlo", "Rosario", "Lugi"]
-    }
-  }
 }
