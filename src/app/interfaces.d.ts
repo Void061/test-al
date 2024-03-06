@@ -1,0 +1,3 @@
+interface Cocktail {
+    strDrink : String;
+}
