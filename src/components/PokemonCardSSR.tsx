@@ -1,7 +1,10 @@
 import { getPokemons } from "@/app/action";
 
+interface Pokemon {
+  name : string
+}
 const PokemonCardSSR = async () => {
-    const pokemons = await getPokemons(0, 0);
+    const pokemons : Pokemon[] = await getPokemons(0, 0);
     return(<div>
       {pokemons.map((pokemon, index) => {
       const { name } = pokemon;
