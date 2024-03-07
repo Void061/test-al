@@ -1,11 +1,10 @@
-import PokemonCardSSR from "@/components/PokemonCardSSR";
 import PokemonCard from "@/components/PokemonCard";
+import { getPokemons } from "./action";
 export default async function Home() {
-
+  const pokemons : Pokemon[] = await getPokemons(0, 0);
   return (
     <div>
-      <PokemonCardSSR />
-      <PokemonCard />
+      <PokemonCard _pokemons={pokemons}/>
     </div>
   );
 }

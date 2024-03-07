@@ -1,3 +1,3 @@
-interface Cocktail {
-    strDrink : String;
+interface Pokemon {
+    name : String;
 }
